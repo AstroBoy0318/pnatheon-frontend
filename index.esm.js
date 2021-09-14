@@ -2332,11 +2332,11 @@ var Accordion = function (_a) {
     var closeSubmenu = function () {
         setIsOpen(function (prevState) { return !prevState; });
     };
-    return (React.createElement(Container$2, { onMouseEnter: showSubmenu, onMouseOut: closeSubmenu },
-        React.createElement(MenuEntry, { className: className },
+    return (React.createElement(Container$2, { onMouseOver: showSubmenu, onMouseOut: closeSubmenu },
+        React.createElement(MenuEntry, { className: className, onMouseOver: showSubmenu },
             icon,
-            React.createElement(LinkLabel, { isPushed: isPushed }, label),
-            isOpen ? React.createElement(Icon$8,  { onMouseEnter: showSubmenu } ) : React.createElement(Icon$7, null)),
+            React.createElement(LinkLabel, { isPushed: isPushed, onMouseOver: showSubmenu }, label),
+            isOpen ? React.createElement(Icon$8,  { onMouseOver: showSubmenu } ) : React.createElement(Icon$7, null)),
         React.createElement(AccordionContent, { isOpen: isOpen, isPushed: isPushed, maxHeight: React.Children.count(children) * MENU_ENTRY_HEIGHT }, children)));
 };
 var templateObject_1$A, templateObject_2$b;
@@ -2418,7 +2418,7 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$C, templateObject_2$c, templateObject_3$7, templateObject_4$2;
 
-var StyledPanel = styled.div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n height: max-content;\n transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"])), function (_a) {
+var StyledPanel = styled.div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n position: fixed;\n padding-top: ", ";\n  bottom: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n height: max-content;\n transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     // return (showMenu ? "80px" : 0);
     return 0;
@@ -2693,7 +2693,7 @@ var StyledNav = styled.nav(templateObject_2$f || (templateObject_2$f = __makeTem
     return lightColors.background;
 });
 var BodyWrapper = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n flex-direction: column; \n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n min-height: calc(100vh - 58px);\n flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    margin-left: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    margin-left: ", ";\n  }\n"])), function (_a) {
+var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n padding-bottom: 58px;\n min-height: calc(100vh - 0px);\n flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    margin-left: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    margin-left: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     //return (showMenu ? MENU_HEIGHT + "px" : 0);
     return 0;

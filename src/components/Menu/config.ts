@@ -11,17 +11,21 @@ const config: MenuEntry[] = [
     label: 'Farms',
     icon: 'FarmIcon',
     href: '/farms',
-  },/*
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: '/craters',
   },
   {
-    label: 'Referrals',
+    label: 'Trade',
     icon: 'GroupsIcon',
-    href: '/referrals',
-  }, */
+    items: [
+      {
+        label: "Swap",
+        href: "https://quickswap.com"
+      },
+      {
+        label: "Liquidity",
+        href: "https://quickswap.com"
+      }
+    ],
+  },
   {
     label: 'Chart',
     icon: 'GroupsIcon',

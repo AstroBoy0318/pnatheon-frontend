@@ -13,12 +13,12 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.1em !important;
   }
   @font-face {
-    font-family: "Poly";
-    src: url(/fonts/poly/Quivira.otf);
+    font-family: "SQPR";
+    src: url(/fonts/poly/sqpr.ttf);
   } 
   body {
     background-color: ${({ theme }) => theme.colors.background};
-    font-family: Poly;
+    font-family: SQPR;
 
     img {
       height: auto;
