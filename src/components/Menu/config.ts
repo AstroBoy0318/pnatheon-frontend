@@ -8,11 +8,6 @@ const config: MenuEntry[] = [
     href: '/',
   },
   {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: '/farms',
-  },
-  {
     label: 'Trade',
     icon: 'GroupsIcon',
     items: [
@@ -23,14 +18,53 @@ const config: MenuEntry[] = [
       {
         label: "Liquidity",
         href: "https://quickswap.com"
-      }
+      },
     ],
   },
   {
-    label: 'Chart',
+    label: 'Farms',
+    icon: 'FarmIcon',
+    href: '/farms',
+  },
+  
+  {
+    label: 'Charts',
     icon: 'GroupsIcon',
-    href: 'https://polygon.poocoin.app/'
-  }
+    items: [
+      {
+        label: "PooCoin",
+        href: "https://polygon.poocoin.app/"
+      },
+      {
+        label: "QuickChart",
+        href: "https://quickchart.app/token/"
+      },
+    ],
+  },
+
+ {
+    label: 'More',
+    icon: 'GroupsIcon',
+    items: [
+      {
+        label: "Documents",
+        href: "https://polygon.poocoin.app/"
+      },
+      {
+        label: "Github",
+        href: "https://quickchart.app/token/"
+      },
+       {
+        label: "Twitter",
+        href: "https://quickchart.app/token/"
+      },
+   {
+        label: "Telegram",
+        href: "https://quickchart.app/token/"
+      },
+    ],
+  },
+
 ]
 
 export default config

@@ -27,7 +27,7 @@ const Hero = styled.div`
 
   ${({ theme }) => theme.mediaQueries.lg} {
     background-position: left center, right center;
-    background-size: 30px;
+    background-size: 20px;
     height: 30px;
     padding-top: 0;
   }
@@ -37,9 +37,9 @@ const Cards = styled(BaseLayout)`
   align-items: stretch;
   justify-content: stretch;
   margin-bottom: 48px;
-  max-width: 1000px;
+  max-width: 850px;
   margin: 0 auto;
-  grid-gap: 24px;
+  grid-gap: 20px;
 
   & > div {
     grid-column: span 8;

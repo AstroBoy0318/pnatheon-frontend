@@ -8,7 +8,7 @@ import { QuoteToken } from 'config/constants/types'
 import CardValue from './CardValue'
 
 const StyledUptoEarnCard = styled(Card)`
-  text-align: center;
+  text-align: left;
   ${({ theme }) => theme.mediaQueries.lg} {
     max-width: none;
   }
@@ -42,15 +42,14 @@ const UptoEarnCard = () => {
     return (
         <StyledUptoEarnCard>
             <CardBody>
-                <Heading color="black" size="lg">
-                    Earn up to
+                <Heading size="lg" style={{textAlign: "left", color: '#4E4E50'}}>
+                    Farm and Earn up to
                 </Heading>
-
                 <CardMidContent color="text" marginTop="0em">
-                    <CardValue value={maxAPY} surfix="%" decimals={2} fontSize="lg" />
+                    <CardValue value={maxAPY} surfix="%" decimals={2} fontSize="xl" />
                 </CardMidContent>
-                <Heading color="black" size="sm" marginTop="0.5em">
-                    Max apy in farms
+                <Heading size="sm" marginTop="0.5em" style={{textAlign: "left", color: '#4E4E50'}}>
+                    Max APY in our Farms
                 </Heading>
             </CardBody>
         </StyledUptoEarnCard>

@@ -171,8 +171,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
       {!removed && (
           <Flex justifyContent="space-between" alignItems="center">
-            <Text color="black" bold fontSize="20px">{TranslateString(352, 'APY')}:</Text>
-            <Text color="black" bold style={{ display: 'flex', alignItems: 'center' }} fontSize="20px">
+            <Text color="black" fontSize="18px">{TranslateString(352, 'APY')}:</Text>
+            <Text color="black" style={{ display: 'flex', alignItems: 'center' }} fontSize="18px">
               {farm.apy ? (
                 <>
                   <ApyButton
@@ -183,7 +183,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                     cakePrice={cakePrice}
                     apy={farm.apy}
                   />
+                  <Text color="black" style={{ fontSize: '18px' }}>
                   {farmAPY}%
+                    </Text>
                 </>
               ) : (
                 <Skeleton height={24} width={80} />
@@ -192,12 +194,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           </Flex>
         )}
         <Flex justifyContent='space-between'>
-          <Text color="black">{TranslateString(318, 'Earn')}:</Text>
-          <Text color="black" bold>{earnLabel}</Text>
+          <Text color="black" style={{ fontSize: '18px' }}>{TranslateString(318, 'Earn')}:</Text>
+          <Text color="black" style={{ fontSize: '18px' }}>{earnLabel}</Text>
         </Flex>
         <Flex justifyContent='space-between'>
-          <Text color="black" style={{ fontSize: '24px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
-          <Text color="black" bold style={{ fontSize: '24px' }}>{(farm.depositFeeBP / 100)}%</Text>
+          <Text color="black" style={{ fontSize: '18px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
+          <Text color="black"  style={{ fontSize: '18px' }}>{(farm.depositFeeBP / 100)}%</Text>
         </Flex>
         <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
         <Divider />

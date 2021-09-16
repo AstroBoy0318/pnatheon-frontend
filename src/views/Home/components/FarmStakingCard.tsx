@@ -30,13 +30,13 @@ const Block = styled.div`
 
 const Label = styled.div`
   color: black;
-  font-size: 16px;
+  font-size: 15px;
 `
 
 const Actions = styled.div`
   width: 100%;
   text-align: center;
-  padding-top: 1em;
+  padding-top: 2em;
 `
 
 const Row = styled.div`
@@ -73,11 +73,11 @@ const FarmedStakingCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <Heading size="xl" mb="24px" style={{ marginTop: '10px',textAlign: "center" }} color="black">
+        <Heading size="lg" mb="24px" style={{ marginTop: '8px',textAlign: "center", color: '#4E4E50'}}>
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
         <Block>
-          <img src="/images/logo2.png" alt="Mumu" style={{ height: "100px",marginBottom: "1em" }}/>
+          <img src="/images/logo2.png" alt="Drachma" style={{ height: "100px",marginBottom: "1em" }}/>
         </Block>
         <Block>
           <div>
@@ -113,7 +113,7 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, ' Mumu')
+                ? TranslateString(548, ' Drach')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (

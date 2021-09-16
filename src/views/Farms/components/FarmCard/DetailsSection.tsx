@@ -70,9 +70,9 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           <Text color="black">{totalValueFormated === "$NaN"?"$0":totalValueFormated}</Text>
         </Flex>
       )}
-      <Flex justifyContent="center">
+      <Flex justifyContent="left">
         <Link external href={bscScanAddress} bold={false}>
-          View on Polygon
+        <Text color="black" bold>  View on Polygon </Text>
         </Link>
       </Flex>
     </Wrapper>

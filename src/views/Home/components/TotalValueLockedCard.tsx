@@ -6,7 +6,7 @@ import { useTotalValue } from '../../../state/hooks'
 import CardValue from './CardValue'
 
 const StyledTotalValueLockedCard = styled(Card)`
-  text-align: center;
+  text-align: left;
   ${({ theme }) => theme.mediaQueries.lg} {
     max-width: none;
   }
@@ -26,13 +26,13 @@ const TotalValueLockedCard = () => {
   return (
     <StyledTotalValueLockedCard>
       <CardBody>
-        <Heading color="black" size="lg">
+        <Heading  size="lg" style={{textAlign: "left", color: '#4E4E50'}}>
           {TranslateString(999, 'Total Value Locked (TVL)')}
         </Heading>
-	      <CardMidContent color="text" marginTop="0em">
-            <CardValue value={totalValue.toNumber()} prefix="$" decimals={2} fontSize="lg"/>
+	      <CardMidContent color="#4E4E50" marginTop="0em">
+            <CardValue value={totalValue.toNumber()} prefix="$" decimals={2} fontSize="xl"/>
         </CardMidContent>
-        <Heading color="black" size="sm" marginTop="0.5em">
+        <Heading size="sm" marginTop="0.5em" style={{textAlign: "left", color: '#4E4E50'}}>
 	   	    Across all Farms
 	      </Heading>
 	    </CardBody>

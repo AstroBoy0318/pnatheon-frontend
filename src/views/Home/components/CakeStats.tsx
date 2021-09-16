@@ -77,32 +77,32 @@ const CakeStats = () => {
   return (
     <StyledCakeStats>
       <CardBody style={{padding: "24px 10px",paddingBottom: "5px"}}>
-        <Heading size="xl" mb="24px" color="black" style={{marginTop: '10px', marginBottom: '1em', position: 'relative'}}>
-          { CAKE_NAME } Stats <Button onClick={addToken} disabled={isPending} padding="0.5em" size="sm" style={{position: "absolute",top:"0.3em",right: "0"}}>+ <img src="/images/icons/metamask.png" alt="metamask" width="24"/></Button>
+        <Heading size="lg" mb="24px" color="black" style={{marginTop: '8px',marginBottom: '1em',position: 'relative',textAlign: "left", marginLeft: "15px", color: '#4E4E50'}}>
+          { CAKE_NAME } Stats <Button onClick={addToken} disabled={isPending} padding="0.5em" size="sm" style={{position: "absolute",top:"0.05em",right: "4.3em"}}>+ <img src="/images/icons/metamask.png" alt="metamask" width="24"/></Button>
         </Heading>
         <Row>
-          <Text fontSize="14px" color="black">Total { CAKE_NAME } Supply</Text>
-          <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
+          <Text fontSize="16px" color="black">Total { CAKE_NAME } Supply</Text>
+          <CardValue fontSize="16px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
-          <Text fontSize="14px" color="black">Total Minted</Text>
-          {totalSupply && <CardValue fontSize="14px" value={getBalanceNumber(totalSupply)} decimals={0} />}
+          <Text fontSize="16px" color="black">Total Minted</Text>
+          {totalSupply && <CardValue fontSize="16px" value={getBalanceNumber(totalSupply)} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px" color="black">Total Burned</Text>
-          <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
+          <Text fontSize="16px" color="black">Total Burned</Text>
+          <CardValue fontSize="16px" value={getBalanceNumber(burnedBalance)} decimals={0} />
         </Row>
         <Row>
-          <Text fontSize="14px" color="black">Circulating Supply</Text>
-          {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
+          <Text fontSize="16px" color="black">Circulating Supply</Text>
+          {cakeSupply && <CardValue fontSize="16px" value={cakeSupply} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px" color="black">New {CAKE_NAME}/block</Text>
-          <Text bold fontSize="14px" color="black">{DrachPerBlock}</Text>
+          <Text fontSize="16px" color="black">New {CAKE_NAME}/block</Text>
+          <Text bold fontSize="16px" color="black">{DrachPerBlock}</Text>
         </Row>
         <Row>
-          <Text fontSize="14px" color="black">Transfer Tax</Text>
-          {transferTax && <CardValue fontSize="14px" value={transferTaxvalue} decimals={0} surfix="%" />}
+          <Text fontSize="16px" color="black">Transfer Tax</Text>
+          {transferTax && <CardValue fontSize="16px" value={transferTaxvalue} decimals={0} surfix="%" />}
         </Row>
       </CardBody>
     </StyledCakeStats>

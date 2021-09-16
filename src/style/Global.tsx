@@ -18,6 +18,11 @@ const GlobalStyle = createGlobalStyle`
   } 
   body {
     background-color: ${({ theme }) => theme.colors.background};
+    background-image: url(images/back.png), url(images/back.png);
+    background-position: right top, left top;
+    background-size: auto calc(100% - 58px), auto calc(100% - 58px);
+    background-attachment: fixed;
+    background-repeat: no-repeat, no-repeat;
     font-family: SQPR;
 
     img {

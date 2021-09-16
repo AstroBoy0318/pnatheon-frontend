@@ -57,77 +57,77 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
     <Modal title="ROI" onDismiss={onDismiss}>
       <Grid>
         <GridItem>
-          <Text fontSize="12px" bold color="primary" textTransform="uppercase" mb="20px">
+          <Text fontSize="12px" bold color="black" textTransform="uppercase" mb="20px">
             {TranslateString(999, 'Timeframe')}
           </Text>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" bold color="primary" textTransform="uppercase" mb="20px">
+          <Text fontSize="12px" bold color="black" textTransform="uppercase" mb="20px">
             {TranslateString(999, 'ROI')}
           </Text>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" bold color="primary" textTransform="uppercase" mb="20px">
+          <Text fontSize="12px" bold color="black" textTransform="uppercase" mb="20px">
             {TranslateString(999, CAKE_NAME.concat(' per $1000'))}
           </Text>
         </GridItem>
         {/* 1 day row */}
         <GridItem>
-          <Text color="primary">1d</Text>
+          <Text color="black">1d</Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">
+          <Text color="black">
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand1D, amountInvested: oneThousandDollarsWorthOfCake })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">{cakeEarnedPerThousand1D}</Text>
+          <Text color="black">{cakeEarnedPerThousand1D}</Text>
         </GridItem>
         {/* 7 day row */}
         <GridItem>
-          <Text color="primary">7d</Text>
+          <Text color="black">7d</Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">
+          <Text color="black">
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand7D, amountInvested: oneThousandDollarsWorthOfCake })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">{cakeEarnedPerThousand7D}</Text>
+          <Text color="black">{cakeEarnedPerThousand7D}</Text>
         </GridItem>
         {/* 30 day row */}
         <GridItem>
-          <Text color="primary">30d</Text>
+          <Text color="black">30d</Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">
+          <Text color="black">
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand30D, amountInvested: oneThousandDollarsWorthOfCake })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">{cakeEarnedPerThousand30D}</Text>
+          <Text color="black">{cakeEarnedPerThousand30D}</Text>
         </GridItem>
         {/* 365 day / APY row */}
         <GridItem>
-          <Text color="primary">365d(APY)</Text>
+          <Text color="black">365d(APY)</Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">
+          <Text color="black">
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfCake })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text color="primary">{cakeEarnedPerThousand365D}</Text>
+          <Text color="black">{cakeEarnedPerThousand365D}</Text>
         </GridItem>
       </Grid>
-      <Description fontSize="12px" color="primary">
+      <Description fontSize="12px" color="black">
         {TranslateString(
           999,
           'Calculated based on current rates. Compounding once daily. Rates are estimates provided for your convenience only, and by no means represent guaranteed returns.',
         )}
       </Description>
       <Flex justifyContent="center">
-        <LinkExternal href={`https://quickswap.exchange/#/add/${liquidityUrlPathParts}`} color="primary">
+        <LinkExternal href={`https://quickswap.exchange/#/add/${liquidityUrlPathParts}`} color="black">
           {TranslateString(999, 'Get')} {lpLabel}
         </LinkExternal>
       </Flex>
