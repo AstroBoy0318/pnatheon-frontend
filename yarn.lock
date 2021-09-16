@@ -1835,10 +1835,10 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.0.0"
 
-"@pantheon-org/uikit@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@pantheon-org/uikit/-/uikit-0.0.1.tgz#c16b80c731b1ec10922141aae387440365efd2cb"
-  integrity sha512-PHD0NPKFbjQiWNnXMZZm2KxbTLwErAOoZhIMV1hvyZH+wD/K5BhRMCTZfzm8gbifqnzFw8gt3iXw1eKK8MCDTQ==
+"@pantheon-org/uikit@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@pantheon-org/uikit/-/uikit-0.0.7.tgz#ad6449a6e87fadf38349877f471fc39abbdd8961"
+  integrity sha512-2elDWXJigY91KEerWAUhAUiQeAoXos6xrtSSuUlI2f03YmI1YazLLRhzW/GaM3N3b6HDQaWICkaszD+TX+Z0Bw==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"

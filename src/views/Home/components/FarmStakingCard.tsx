@@ -37,6 +37,7 @@ const Actions = styled.div`
   width: 100%;
   text-align: center;
   padding-top: 2em;
+
 `
 
 const Row = styled.div`
@@ -84,8 +85,8 @@ const FarmedStakingCard = () => {
             <Row>
               <Label>{ CAKE_NAME } to Harvest</Label>
             </Row>
-            <Row>
-              <CakeHarvestBalance earningsSum={earningsSum}/>
+            <Row style={{fontSize: '14px'}}>
+            <CakeHarvestBalance earningsSum={earningsSum}/> 
             </Row>
             <Row>
               <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
@@ -95,8 +96,8 @@ const FarmedStakingCard = () => {
             <Row>
               <Label>{ CAKE_NAME } in Wallet</Label>
             </Row>
-            <Row>
-              <CakeWalletBalance cakeBalance={cakeBalance} />
+            <Row style={{fontSize: '14px'}}>
+               <CakeWalletBalance cakeBalance={cakeBalance} /> 
             </Row>
             <Row>
               <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>

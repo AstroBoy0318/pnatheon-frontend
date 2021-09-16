@@ -43,7 +43,7 @@ const Cards = styled(BaseLayout)`
 
   & > div {
     grid-column: span 8;
-    width: 100%;
+    width: 96%;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -71,13 +71,13 @@ const Home: React.FC = () => {
       <div>
         <Cards>
           <FarmStakingCard />
-          <NewsCard />
+	 <NewsCard />
           {/* <AddTokenCard /> */}
           {/* <LotteryCard /> */}
           {/* <Announcement /> */}
           {/* <LPWorth /> */}
           <CakeStats />
-          <TotalValueLockedCard />
+	<TotalValueLockedCard />
           <UptoEarnCard />
 	      </Cards>
       </div>

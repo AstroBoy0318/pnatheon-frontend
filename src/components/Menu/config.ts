@@ -13,11 +13,13 @@ const config: MenuEntry[] = [
     items: [
       {
         label: "Swap",
-        href: "https://quickswap.com"
+        target: "_blank",
+        href: "https://quickswap.exchange/#/swap?outputCurrency=0xF2FfB03daB169D38C42002683805ABbA110bEf68"
       },
       {
         label: "Liquidity",
-        href: "https://quickswap.com"
+        target: "_blank",
+        href: "https://quickswap.exchange/#/add/0xF2FfB03daB169D38C42002683805ABbA110bEf68"
       },
     ],
   },
@@ -33,11 +35,13 @@ const config: MenuEntry[] = [
     items: [
       {
         label: "PooCoin",
-        href: "https://polygon.poocoin.app/"
+        target: "_blank",
+        href: "https://polygon.poocoin.app/tokens/0xF2FfB03daB169D38C42002683805ABbA110bEf68"
       },
       {
         label: "QuickChart",
-        href: "https://quickchart.app/token/"
+        target: "_blank",
+        href: "https://quickchart.app/token/0xF2FfB03daB169D38C42002683805ABbA110bEf68"
       },
     ],
   },
@@ -48,19 +52,28 @@ const config: MenuEntry[] = [
     items: [
       {
         label: "Documents",
-        href: "https://polygon.poocoin.app/"
+        target: "_blank",
+        href: "https://pantheonfinance.gitbook.io/pantheon-finance/"
       },
       {
         label: "Github",
-        href: "https://quickchart.app/token/"
+        target: "_blank",
+        href: "https://github.com/PantheonFin"
       },
        {
         label: "Twitter",
-        href: "https://quickchart.app/token/"
+        target: "_blank",
+        href: "https://twitter.com/FinancePair"
       },
    {
         label: "Telegram",
-        href: "https://quickchart.app/token/"
+        target: "_blank",
+        href: "https://t.me/PantheonFinance"
+      },
+      {
+        label: "Medium",
+        target: "_blank",
+        href: "https://pantheonfinance.medium.com/"
       },
     ],
   },

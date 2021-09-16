@@ -16,7 +16,7 @@ const CakeHarvestBalance = ({earningsSum}) => {
     )
   }
 
-  return <CardValue value={earningsSum}  fontSize="35px"/>
+  return <CardValue value={earningsSum}  fontSize="17px"/>
 }
 
 export default CakeHarvestBalance

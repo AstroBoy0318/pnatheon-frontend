@@ -77,11 +77,11 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
     <Action>
       <Flex justifyContent="space-between" mb="10px">
         <Flex>
-          <Text bold textTransform="uppercase" color="black" fontSize="12px" pr="3px">
+          <Text bold textTransform="uppercase" color="#4E4E50" fontSize="12px" pr="3px">
             {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
             {CAKE_NAME}
           </Text>
-          <Text bold textTransform="uppercase" color="primary" fontSize="12px">
+          <Text bold textTransform="uppercase" color="#4E4E50" fontSize="12px">
             {TranslateString(999, 'Earned')}
           </Text>
         </Flex>

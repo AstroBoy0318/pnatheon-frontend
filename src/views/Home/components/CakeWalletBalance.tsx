@@ -16,7 +16,7 @@ const CakeWalletBalance = ({ cakeBalance }) => {
     )
   }
 
-  return <CardValue value={cakeBalance} fontSize="35px" />
+  return <CardValue value={cakeBalance} fontSize="17px" />
 }
 
 export default CakeWalletBalance
