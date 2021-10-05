@@ -223,6 +223,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
             quoteTokenAdresses={quoteTokenAddresses}
             quoteTokenSymbol={quoteTokenSymbol}
             tokenAddresses={tokenAddresses}
+            lpBuyUrl={farm.buyUrl}
           />
         </ExpandingWrapper>
       </FCardBody>

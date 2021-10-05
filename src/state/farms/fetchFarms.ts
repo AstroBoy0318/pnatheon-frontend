@@ -102,6 +102,21 @@ const fetchFarms = async () => {
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP1).div(new BigNumber(tokenBalanceLP));
         }
       }
+      if(farmConfig.risk === 0)
+      {
+        return {
+          ...farmConfig,
+          tokenAmount: tokenAmount.toJSON(),
+          // quoteTokenAmount: quoteTokenAmount,
+          lpTotalInQuoteToken: lpTotalInQuoteToken.toJSON(),
+          tokenPriceVsQuote: tokenPriceVsQuote.toJSON(),
+          poolWeight: 0,
+          multiplier: `0X`,
+          depositFeeBP: 0,
+          harvestInterval: 0,
+          DrachPerBlock: 0,
+        }
+      }
       const [info, totalAllocPoint, DrachPerBlock] = await multicall(masterchefABI, [
         {
           address: getMasterChefAddress(),

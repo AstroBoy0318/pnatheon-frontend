@@ -78,7 +78,7 @@ const CakeStats = () => {
     <StyledCakeStats>
       <CardBody style={{padding: "24px 10px",paddingBottom: "5px"}}>
         <Heading size="lg" mb="24px" color="black" style={{marginTop: '8px',marginBottom: '1em',position: 'relative',textAlign: "left", marginLeft: "15px", color: '#4E4E50'}}>
-          { CAKE_NAME } Stats <Button onClick={addToken} disabled={isPending} padding="0.5em" size="sm" style={{position: "absolute",top:"0.05em",right: "4.3em"}}>+ <img src="/images/icons/metamask.png" alt="metamask" width="24"/></Button>
+          { CAKE_NAME } Stats <Button onClick={addToken} disabled={isPending} padding="0.5em" size="sm" style={{position: "absolute",top:"0.05em",right: "0.75em"}}>+ <img src="/images/icons/metamask.png" alt="metamask" width="24"/></Button>
         </Heading>
         <Row>
           <Text fontSize="16px" color="black">Total { CAKE_NAME } Supply</Text>

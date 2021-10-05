@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ThemeProvider as SCThemeProvider } from 'styled-components'
 import { dark, light } from '@pantheon-org/uikit'
 
-const CACHE_KEY = 'IS_DARK'
+const CACHE_KEY = 'IS_DARK_PANTHEON'
 
 const ThemeContext = React.createContext({ isDark: null, toggleTheme: () => null })
 

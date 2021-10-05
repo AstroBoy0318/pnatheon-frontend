@@ -30,7 +30,7 @@ export enum QuoteToken {
 */
 export enum QuoteToken {
   'BNB' = 'Matic',
-  'CAKE' = 'Drach',
+  'CAKE' = 'Drachs',
   'SYRUP' = 'SYRUP',
   'BUSD' = 'USDC',
   'TWT' = 'TWT',
@@ -62,6 +62,7 @@ export interface FarmConfig {
   isTokenOnly?: boolean
   isCommunity?: boolean
   risk: number
+  buyUrl?: string
   dual?: {
     rewardPerBlock: number
     earnLabel: string

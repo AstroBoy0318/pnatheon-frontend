@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { BaseLayout } from '@pantheon-org/uikit'
+import { BaseLayout, Heading } from '@pantheon-org/uikit'
 import useI18n from 'hooks/useI18n'
+import useTheme from 'hooks/useTheme'
 import Page from 'components/layout/Page'
+import useBlock from 'hooks/useBlock'
+import { useMasterchef } from 'hooks/useContract'
+import { BSC_BLOCK_TIME } from 'config'
 import FarmStakingCard from './components/FarmStakingCard'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 import NewsCard from './components/NewsCard'
 import UptoEarnCard from './components/UptoEarnCard'
+
 
 const Hero = styled.div`
   align-items: center;
@@ -64,22 +69,53 @@ const Cards = styled(BaseLayout)`
 
 const Home: React.FC = () => {
   const TranslateString = useI18n()
+  const { theme } = useTheme()
+  const block = useBlock()
+  const masterChef = useMasterchef()
+  const [startBlock, setStartBlock] = useState(0)
+
+  useEffect(() => {
+    const fetchStartBlock = async () => {
+      setStartBlock(await masterChef.methods.startBlock().call())
+    }
+    fetchStartBlock()
+  }, [masterChef, setStartBlock])
+
+  const startDate = new Date(new Date().getTime() + (startBlock - block) * BSC_BLOCK_TIME * 1000)
+  const formatedStartDate = () => {
+    const yyyy = startDate.getFullYear();
+    const mm = ('0'.concat((startDate.getMonth() + 1).toString())).slice(-2); // Months are zero based. Add leading 0.
+    const dd = ('0'.concat(startDate.getDate().toString())).slice(-2);			// Add leading 0.
+    const hh = ('0'.concat(startDate.getHours().toString())).slice(-2);
+    const min = ('0'.concat(startDate.getMinutes().toString())).slice(-2);		// Add leading 0
+
+    // ie: 2013-02-18, 8:35 AM	
+    const time = yyyy.toString().concat('-').concat(mm).concat('-').concat(dd).concat(' ').concat(hh).concat(':').concat(min);
+
+    return time;
+  }
 
   return (
     <Page>
-      <Hero/>
+      <Hero />
+      {
+      startBlock >= block &&
+      <Heading style={{ textAlign: "center" }} color="black" mb="20px">
+        Farming will start {formatedStartDate()} (Block: {startBlock})
+      </Heading>
+      }
       <div>
         <Cards>
           <FarmStakingCard />
-	 <NewsCard />
+          <NewsCard />
           {/* <AddTokenCard /> */}
           {/* <LotteryCard /> */}
           {/* <Announcement /> */}
           {/* <LPWorth /> */}
           <CakeStats />
-	<TotalValueLockedCard />
+          <TotalValueLockedCard />
           <UptoEarnCard />
-	      </Cards>
+        </Cards>
       </div>
     </Page>
   )

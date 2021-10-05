@@ -15,6 +15,7 @@ export interface ExpandableSectionProps {
   quoteTokenSymbol?: string
   pid?: number
   tokenAddresses: Address
+  lpBuyUrl: string
 }
 
 const Wrapper = styled.div`
@@ -46,10 +47,11 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   quoteTokenAdresses,
   quoteTokenSymbol,
   tokenAddresses,
+  lpBuyUrl
 }) => {
   const TranslateString = useI18n()
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
-  const buyUrl = (pid === -1?`https://quickswap.exchange/#/add/${liquidityUrlPathParts}`:`https://quickswap.exchange/#/add/${liquidityUrlPathParts}`)
+  const buyUrl = `${lpBuyUrl}${liquidityUrlPathParts}`
 
   return (
     <Wrapper>

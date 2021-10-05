@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     background-image: url(images/back.png), url(images/back.png);
     background-position: right top, left top;
-    background-size: auto calc(100% - 58px), auto calc(100% - 58px);
+    background-size: auto calc(100% - 50px), auto calc(100% - 58px);
     background-attachment: fixed;
     background-repeat: no-repeat, no-repeat;
     font-family: SQPR;
